@@ -1,0 +1,42 @@
+{
+  "name": "@justeat/f-serviceworker",
+  "description": "Script for registering the service worker",
+  "version": "0.12.0",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/justeat/f-serviceworker",
+  "contributors": [
+    "Github contributors <https://github.com/justeat/f-serviceworker/graphs/contributors>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:justeat/f-serviceworker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/justeat/f-serviceworker/issues"
+  },
+  "license": "Apache-2.0",
+  "scripts": {
+    "prepare": "concurrently --names \"lint,compile\" --prefix-colors \"blue,yellow\" --kill-others-on-fail \"yarn lint\" \"yarn compile\"",
+    "lint": "eslint src/**/*.js --fix",
+    "compile": "babel -d dist src"
+  },
+  "devDependencies": {
+    "@justeat/eslint-config-fozzie": "2.0.1",
+    "babel-cli": "6.26.0",
+    "babel-minify": "0.4.3",
+    "babel-preset-env": "1.7.0",
+    "concurrently": "3.6.1",
+    "danger": "3.8.6",
+    "eslint": "5.4.0",
+    "eslint-plugin-import": "2.14.0"
+  },
+  "browserslist": [
+    "> 5%",
+    "last 2 versions",
+    "Safari >= 8",
+    "not ie 10"
+  ]
+}
