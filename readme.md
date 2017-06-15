@@ -1,3 +1,3 @@
-﻿# Component Template
+﻿# serviceworker-fozzie
 
-A very rough example of what a global component structure could look like (to be discussed).
+Service worker registration.
