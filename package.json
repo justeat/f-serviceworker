@@ -1,5 +1,5 @@
 {
-  "name": "@justeat/serviceworker-fozzie",
+  "name": "@justeat/f-serviceworker",
   "description": "Scripts for registering the service worker, ",
   "version": "0.0.1",
   "main": "./index.js",

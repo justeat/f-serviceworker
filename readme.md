@@ -1,3 +1,3 @@
-﻿# serviceworker-fozzie
+﻿# f-serviceworker
 
 Service worker registration.
