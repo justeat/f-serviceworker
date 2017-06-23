@@ -3,6 +3,7 @@
   "description": "Scripts for registering the service worker, ",
   "version": "0.0.1",
   "main": "./index.js",
+  "author": "Howard Wallis <howard.wallis@just-eat.com>",
   "scripts": {
     "test": "gulp scripts:test"
   },
