@@ -31,7 +31,7 @@ function handleInstallationStates (registration) {
     }
 }
 
-export default function register () {
+function register () {
     if (isServiceWorkerSupported) {
         navigator.serviceWorker.register('/service-worker.js')
         .then(registration => {
@@ -44,4 +44,8 @@ export default function register () {
             logger.error('Error during service worker registration:', e)
         );
     }
+}
+
+module.exports = {
+    register
 }
