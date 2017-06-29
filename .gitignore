@@ -22,3 +22,5 @@ nbproject
 Thumbs.db
 logs
 *.log
+
+set-eol.ps1
