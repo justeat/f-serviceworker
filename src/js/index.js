@@ -12,7 +12,7 @@ const isServiceWorkerSupported =
 function handleInstallationStates (registration) {
     const installingWorker = registration.installing;
     if (navigator.serviceWorker.controller) {
-        installingWorker.onstatechange = () => {
+        installingWorker.onstatechange = function () {
             switch (installingWorker.state) {
                 case 'installed':
                     // At this point, the old content will have been purged and the
@@ -34,10 +34,10 @@ function handleInstallationStates (registration) {
 function register () {
     if (isServiceWorkerSupported) {
         navigator.serviceWorker.register('/service-worker.js')
-        .then(registration => {
+        .then(function (registration) {
             // updatefound is fired if service-worker.js changes,
             // or when the SW is first installed
-            registration.onupdatefound = () => {
+            registration.onupdatefound = function () {
                 handleInstallationStates(registration);
             };
         });
@@ -48,5 +48,5 @@ function register () {
 }
 
 module.exports = {
-    register
+    register: register
 };
