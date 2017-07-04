@@ -1,16 +1,16 @@
-const isLocalhost = Boolean(
+var isLocalhost = Boolean(
     window.location.hostname.match( // localhost OR [::1] OR 127.0.0.1/8
         /^localhost$|^\[::1\]$|^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
     )
 );
 
 // Service workers are only supported over https (and localhost for dev)
-const isServiceWorkerSupported =
+var isServiceWorkerSupported =
     'serviceWorker' in navigator &&
     (window.location.protocol === 'https:' || isLocalhost);
 
 function handleInstallationStates (registration) {
-    const installingWorker = registration.installing;
+    var installingWorker = registration.installing;
     if (navigator.serviceWorker.controller) {
         installingWorker.onstatechange = function () {
             switch (installingWorker.state) {
