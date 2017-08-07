@@ -12,6 +12,9 @@
   ],
   "homepage": "https://github.com/justeat/f-serviceworker#readme",
   "license": "Apache-2.0",
+  "scripts": {
+    "prepublish": "gulp scripts"
+  },
   "dependencies": {
     "@justeat/gulp-build-fozzie": "^4.0.0",
     "babel-preset-es2015": "^6.24.1"
