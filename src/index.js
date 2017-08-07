@@ -1,18 +1,22 @@
-var isLocalhost = Boolean(
-    window.location.hostname.match( // localhost OR [::1] OR 127.0.0.1/8
+const isLocalhost = Boolean(
+    window.location.hostname.match(
+        // localhost OR [::1] OR 127.0.0.1/8
         /^localhost$|^\[::1\]$|^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
     )
 );
 
+
 // Service workers are only supported over https (and localhost for dev)
-var isServiceWorkerSupported =
+const isServiceWorkerSupported =
     'serviceWorker' in navigator &&
     (window.location.protocol === 'https:' || isLocalhost);
 
-function handleInstallationStates (registration) {
-    var installingWorker = registration.installing;
+
+const handleInstallationStates = registration => {
+    const installingWorker = registration.installing;
+
     if (navigator.serviceWorker.controller) {
-        installingWorker.onstatechange = function () {
+        installingWorker.onstatechange = () => {
             switch (installingWorker.state) {
                 case 'installed':
                     // At this point, the old content will have been purged and the
@@ -25,22 +29,23 @@ function handleInstallationStates (registration) {
                     throw new Error('The installing service worker became redundant.');
 
                 default:
-                    // Ignore
+                // Ignore
             }
         };
     }
 }
 
-function register () {
+
+const register = () => {
     if (isServiceWorkerSupported) {
         navigator.serviceWorker.register('/service-worker.js')
-        .then(function (registration) {
-            // updatefound is fired if service-worker.js changes,
-            // or when the SW is first installed
-            registration.onupdatefound = function () {
-                handleInstallationStates(registration);
-            };
-        });
+            .then(registration => {
+                // updatefound is fired if service-worker.js changes,
+                // or when the SW is first installed
+                registration.onupdatefound = () => {
+                    handleInstallationStates(registration);
+                };
+            });
         // .catch(e => {
         //     logger.error('Error during service worker registration:', e)
         // });
@@ -48,5 +53,5 @@ function register () {
 }
 
 module.exports = {
-    register: register
+    register
 };
