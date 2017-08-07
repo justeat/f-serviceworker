@@ -3,10 +3,13 @@
   "description": "Script for registering the service worker",
   "version": "0.6.0",
   "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
   "author": "Howard Wallis <howard.wallis@just-eat.com>",
-  "scripts": {
-    "test": "gulp scripts:test"
-  },
+  "contributors": [
+    "Github contributors <https://github.com/justeat/f-serviceworker/graphs/contributors>"
+  ],
   "license": "Apache-2.0",
   "dependencies": {
     "@justeat/gulp-build-fozzie": "^4.0.0",
@@ -19,10 +22,5 @@
     "Chrome >= 46",
     "Firefox >= 44",
     "Opera >= 27"
-  ],
-  "jest": {
-    "roots": [
-      "src/js"
-    ]
-  }
+  ]
 }
