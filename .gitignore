@@ -24,3 +24,5 @@ logs
 *.log
 
 set-eol.ps1
+
+dist
