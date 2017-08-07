@@ -33,7 +33,7 @@ const handleInstallationStates = registration => {
             }
         };
     }
-}
+};
 
 
 const register = () => {
@@ -50,7 +50,7 @@ const register = () => {
         //     logger.error('Error during service worker registration:', e)
         // });
     }
-}
+};
 
 module.exports = {
     register
