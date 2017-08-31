@@ -52,6 +52,6 @@ const register = () => {
     }
 };
 
-module.exports = {
+export default {
     register
 };
