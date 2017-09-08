@@ -10,3 +10,9 @@ Sw.register();
 ```
 
  on all pages which should be managed by the service worker.
+
+ Optional configuration object can be passed containing the service-worker.js path. If not provided it defaults to /service-worker.js
+
+ ```javascript
+ Sw.register({ swPath: '/subdir/service-worker.js' });
+ ```
