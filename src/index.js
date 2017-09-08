@@ -36,9 +36,10 @@ const handleInstallationStates = registration => {
 };
 
 
-const register = () => {
+const register = (config) => {
     if (isServiceWorkerSupported) {
-        navigator.serviceWorker.register('/service-worker.js')
+        const swPath = config && config.swPath ? config.swPath : '/service-worker.js';
+        navigator.serviceWorker.register(swPath)
             .then(registration => {
                 // updatefound is fired if service-worker.js changes,
                 // or when the SW is first installed
