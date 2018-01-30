@@ -1,28 +1,36 @@
 {
   "name": "@justeat/f-serviceworker",
   "description": "Script for registering the service worker",
-  "version": "0.11.0",
-  "main": "./dist/index.js",
+  "version": "0.12.0",
+  "main": "dist/index.js",
   "files": [
     "dist"
   ],
-  "author": "Howard Wallis <howard.wallis@just-eat.com>",
+  "homepage": "https://github.com/justeat/f-serviceworker",
   "contributors": [
     "Github contributors <https://github.com/justeat/f-serviceworker/graphs/contributors>"
   ],
-  "homepage": "https://github.com/justeat/f-serviceworker#readme",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:justeat/f-serviceworker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/justeat/f-serviceworker/issues"
+  },
   "license": "Apache-2.0",
   "scripts": {
-    "prepare": "yarn run compile",
+    "prepare": "concurrently --names \"lint,compile\" --prefix-colors \"blue,yellow\" --kill-others-on-fail \"yarn lint\" \"yarn compile\"",
+    "lint": "eslint {src,test}/**/*.js",
     "compile": "babel -d dist src"
   },
-  "dependencies": {
+  "devDependencies": {
+    "@justeat/eslint-config-fozzie": "^1.4.0",
     "babel-cli": "^6.26.0",
     "babel-preset-babili": "^0.1.4",
-    "babel-preset-env": "^1.6.1"
-  },
-  "stylelint": {
-    "extends": "@justeat/stylelint-config-fozzie"
+    "babel-preset-env": "^1.6.1",
+    "concurrently": "^3.5.1",
+    "eslint": "^4.16.0",
+    "eslint-plugin-import": "^2.8.0"
   },
   "browserslist": [
     "> 5%",

@@ -36,7 +36,7 @@ const handleInstallationStates = registration => {
 };
 
 
-const register = (config) => {
+const register = config => {
     if (isServiceWorkerSupported) {
         const swPath = config && config.swPath ? config.swPath : '/service-worker.js';
         navigator.serviceWorker.register(swPath)

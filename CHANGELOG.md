@@ -4,6 +4,23 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+v0.12.0
+------------------------------
+*January 30, 2018*
+
+### Added
+- Added lint script.
+- Run npm scripts concurrently.
+
+### Changed
+- Updated `package.json` sections.
+- Updated license to short version.
+- Updated `gitignore` file.
+
+### Fixed
+- Fixed lint warning in module.
+
+
 v0.11.0
 ------------------------------
 *January 30, 2018*
