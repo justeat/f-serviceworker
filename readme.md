@@ -1,4 +1,4 @@
-﻿# f-serviceworker
+# f-serviceworker :bear:
 
 [![npm version](https://badge.fury.io/js/%40justeat%2Ff-serviceworker.svg)](https://badge.fury.io/js/%40justeat%2Ff-serviceworker)
 
