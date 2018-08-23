@@ -7,13 +7,13 @@
 Contains the registration script for `service-worker.js` located in the root of your website.
 
 ```javascript
-const Sw = require(@justeat/f-serviceworker);
-Sw.register();
+const sw = require('@justeat/f-serviceworker');
+sw.register();
 ```
 
- on all pages which should be managed by the service worker.
+ on all pages that should be managed by the service worker.
 
- Optional configuration object can be passed containing the service-worker.js path. If not provided it defaults to /service-worker.js
+ Optional configuration object can be passed containing the service-worker.js path. Defaults to /service-worker.js
 
  ```javascript
  Sw.register({ swPath: '/subdir/service-worker.js' });
